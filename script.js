@@ -28,6 +28,7 @@ function allClear() {
   lowerDisplay.value = '';
   upperDisplay.value = '';
   operand = null;
+  oldOp = null;
 }
 
 function posNeg() {
@@ -48,6 +49,7 @@ function operator(op) {
   } else {
     upperDisplay.value = compute(oldOp);
     operand = parseFloat(upperDisplay.value);
+    upperDisplay.value = operand + ' ' + op;
     lowerDisplay.value = '';
     oldOp = op;
   }
