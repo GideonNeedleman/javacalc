@@ -29,6 +29,7 @@ body {
   width: 240px;
   background-color: yellow;
   border:0;
+  text-align: right;
 }
 
 #lowerDisplay {

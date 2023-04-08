@@ -8,37 +8,38 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" defer></script> -->
   <script src="https://kit.fontawesome.com/f265dbc9fe.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
 </head>
 <body>
   <div class="container">
     <input type="text" name="upperDisplay" id="upperDisplay" disabled>
     <br>
-    <input type="number" name="lowerDisplay" id="lowerDisplay">
+    <input type="text" name="lowerDisplay" id="lowerDisplay" disabled>
     <br>
-    <button class="btn btn-secondary"><i class="fa-solid fa-delete-left"></i></button>
-    <button class="btn btn-secondary" onclick="lowerDisplay.value=''">CE</button>
-    <button class="btn btn-secondary" onclick="allClear()">AC</button>
-    <button class="btn btn-secondary"><i class="fa-solid fa-divide"></i></button>
+    <button class="btn"><i class="fa-solid fa-delete-left" onclick = "del()"></i></button>
+    <button class="btn" onclick="lowerDisplay.value=''">CE</button>
+    <button class="btn" onclick="allClear()">AC</button>
+    <button class="btn" onclick="operator('/')"><i class="fa-solid fa-divide"></i></button>
     <br>
-    <button class="btn btn-secondary" onclick="lowerDisplay.value+='7'">7</button>
-    <button class="btn btn-secondary" onclick="lowerDisplay.value+='8'">8</button>
-    <button class="btn btn-secondary" onclick="lowerDisplay.value+='9'">9</button>
-    <button class="btn btn-secondary"><i class="fa-solid fa-xmark"></i></button>
+    <button class="btn" onclick="inputNum(7)">7</button>
+    <button class="btn" onclick="inputNum(8)">8</button>
+    <button class="btn" onclick="inputNum(9)">9</button>
+    <button class="btn" onclick="operator('x')"><i class="fa-solid fa-xmark"></i></button>
     <br>
-    <button class="btn btn-secondary" onclick="lowerDisplay.value+='4'">4</button>
-    <button class="btn btn-secondary" onclick="lowerDisplay.value+='5'">5</button>
-    <button class="btn btn-secondary" onclick="lowerDisplay.value+='6'">6</button>
-    <button class="btn btn-secondary"><i class="fa-solid fa-minus"></i></button>
+    <button class="btn" onclick="inputNum(4)">4</button>
+    <button class="btn" onclick="inputNum(5)">5</button>
+    <button class="btn" onclick="inputNum(6)">6</button>
+    <button class="btn" onclick="operator('-')"><i class="fa-solid fa-minus"></i></button>
     <br>
-    <button class="btn btn-secondary" onclick="lowerDisplay.value+='1'">1</button>
-    <button class="btn btn-secondary" onclick="lowerDisplay.value+='2'">2</button>
-    <button class="btn btn-secondary" onclick="lowerDisplay.value+='3'">3</button>
-    <button class="btn btn-secondary"><i class="fa-solid fa-plus"></i></button>
+    <button class="btn" onclick="inputNum(1)">1</button>
+    <button class="btn" onclick="inputNum(2)">2</button>
+    <button class="btn" onclick="inputNum(3)">3</button>
+    <button class="btn" onclick="operator('+')"><i class="fa-solid fa-plus"></i></button>
     <br>
-    <button class="btn btn-secondary"><i class="fa-solid fa-plus-minus"></i></button>
-    <button class="btn btn-secondary" onclick="lowerDisplay.value+='0'">0</button>
-    <button class="btn btn-secondary">.</button>
-    <button class="btn btn-secondary"><i class="fa-solid fa-equals"></i></button>
+    <button class="btn" onclick="posNeg()"><i class="fa-solid fa-plus-minus"></i></button>
+    <button class="btn" onclick="inputNum(0)">0</button>
+    <button class="btn" onclick="inputDec()">.</button>
+    <button class="btn" onclick="equals()"><i class="fa-solid fa-equals"></i></button>
   </div>
 </body>
 </html>
