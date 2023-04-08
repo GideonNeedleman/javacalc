@@ -12,10 +12,12 @@
 </head>
 <body>
   <div class="container">
-    <input type="text" name="upperDisplay" id="upperDisplay" disabled>
-    <br>
-    <input type="text" name="lowerDisplay" id="lowerDisplay" disabled>
-    <br>
+    <div class="display">
+      <input type="text" name="upperDisplay" id="upperDisplay" disabled>
+      <br>
+      <input type="text" name="lowerDisplay" id="lowerDisplay" disabled>      
+    </div>
+    
     <button class="btn"><i class="fa-solid fa-delete-left" onclick = "del()"></i></button>
     <button class="btn" onclick="lowerDisplay.value=''">CE</button>
     <button class="btn" onclick="allClear()">AC</button>

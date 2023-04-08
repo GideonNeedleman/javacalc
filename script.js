@@ -3,11 +3,13 @@ var operand = null;
 var oldOp = null;
 const max = 12;
 
-// inputs pressed digit into lower display, up to a max length
+// inputs pressed digit into lower display, up to a max length. Also allows for negative sign in max length digit restriction
 function inputNum(val) {
   const length = lowerDisplay.value.length;
   console.log('length =', length);
-  if (length !== max) {
+  if (length < max) {
+    lowerDisplay.value += val;
+  } else if (lowerDisplay.value < 0 && length < max + 1) {
     lowerDisplay.value += val;
   }
 }
@@ -79,7 +81,19 @@ function equals() {
   if (operand === null || lowerDisplay.value === '') {
     return;
   }
-  lowerDisplay.value = compute(oldOp);
+  let result = compute(oldOp);
+  // simply doing lowerDisplay.value = result
+  // can have display issues if the result is > max digits long. ex: 2/3 or multiplying large numbers. Solution is for long numbers to either truncate them to 11 digits or convert to scientific notation. 
+  // No need to do this when computing result when pressing operator button (chaining operations) because upper display is much longer.
+  if (result.toString().length > max) {
+    if (result > 10000000000) {
+      lowerDisplay.value = result.toExponential(5);
+    } else {
+      lowerDisplay.value = result.toString().slice(0,11);
+    }
+  } else {
+    lowerDisplay.value = result;
+  }
   upperDisplay.value = '';
   oldOp = null;
   operand = null;
