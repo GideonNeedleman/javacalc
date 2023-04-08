@@ -10,6 +10,6 @@ It is also possible to 'chain' operations together. When pressing an operator bu
 1.0 - 20230407 - Initial release
 
 ## Known Bugs
-2023040701 - Result can exceed 12 character limit in display. For example when calculating 2/3 or calculating very large numbers.
+~2023040701~ - Result can exceed 12 character limit in display. For example when calculating 2/3 or calculating very large numbers.
 
-2023040702 - Pressing '=' to complete calculation when lower display is empty results in NaN error.
+~2023040702~ - Pressing '=' to complete calculation when lower display is empty results in NaN error.
