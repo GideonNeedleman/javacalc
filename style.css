@@ -1,0 +1,42 @@
+@font-face {
+  font-family: "digital7";
+  src: url(7Mono.ttf);
+}
+
+* {
+  padding:0;
+  margin:0;
+  font-family: monospace;
+}
+
+body {
+  text-align: center;
+}
+
+.container {
+  width: 500px;
+  height: 800px;
+}
+
+.btn {
+  width: 3em;
+  height: 3em;
+  margin-top: 8px;
+}
+
+#upperDisplay {
+  height: 1em;
+  width: 240px;
+  background-color: yellow;
+  border:0;
+}
+
+#lowerDisplay {
+  height: 1.5em;
+  background-color: yellow;
+  width: 240px;
+  text-align: right;
+  font-family: "digital7", monospace;
+  font-size: 2em;
+  border:0;
+}
