@@ -27,11 +27,30 @@
   width: 55px;
   height: 55px;
   /* margin-top: 8px; */
+  border-radius: 5px;
+  border: none;
+}
+
+.btn-digit {
+  background-color: rgb(214, 214, 214);
+}
+
+.btn-operator {
+  background-color: rgb(115, 207, 177);
+}
+
+.btn-equals {
+  background-color: rgb(255, 158, 141);
+}
+
+.btn-clear {
+  background-color: rgb(88, 88, 88);
+  color: white;
 }
 
 .display {
   background-color: yellow;
-  height: 4em;
+  height: 68px;
   width: 240px;
   margin: 0;
   grid-column-start: 1;
@@ -39,7 +58,7 @@
 }
 
 #upperDisplay {
-  height: 1em;
+  height: 17px;
   width: 240px;
   background-color: transparent;
   border:0;
@@ -47,7 +66,7 @@
 }
 
 #lowerDisplay {
-  height: 1.5em;
+  height: 60px;
   background-color: transparent;
   width: 240px;
   text-align: right;
