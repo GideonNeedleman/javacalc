@@ -12,7 +12,7 @@ function inputNum(val) {
   } else if (lowerDisplay.value < 0 && length < max + 1) {
     lowerDisplay.value += val;
   }
-  vibrate(200);
+  navigator.vibrate(200);
 }
 
 // inputs decimal point. Checks that it will fit within max length. Checks there is not already a decimal point. If lower display is empty, then also adds a leading zero before the decimal point.
