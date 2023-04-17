@@ -11,6 +11,7 @@
   <script src="script.js"></script>
 </head>
 <body>
+<div class="outer">
   <div class="container">
     <div class="display">
       <input type="text" name="upperDisplay" id="upperDisplay" disabled>
@@ -34,10 +35,11 @@
     <button class="btn btn-digit" onclick="inputNum(2)">2</button>
     <button class="btn btn-digit" onclick="inputNum(3)">3</button>
     <button class="btn btn-operator" onclick="operator('+')"><i class="fa-solid fa-plus"></i></button>
-    <button class="btn" onclick="posNeg()"><i class="fa-solid fa-plus-minus"></i></button>
+    <button class="btn btn-digit" onclick="posNeg()"><i class="fa-solid fa-plus-minus"></i></button>
     <button class="btn btn-digit" onclick="inputNum(0)">0</button>
-    <button class="btn" onclick="inputDec()">.</button>
+    <button class="btn btn-digit" onclick="inputDec()">.</button>
     <button class="btn btn-equals" onclick="equals()"><i class="fa-solid fa-equals"></i></button>
   </div>
+</div>
 </body>
 </html>
