@@ -34,6 +34,12 @@ function del() {
   lowerDisplay.value = lowerDisplay.value.slice(0, -1);
 }
 
+// clears lower display
+function ce() {
+  navigator.vibrate(50);
+  lowerDisplay.value='';
+}
+
 // clears both displays and resets operand and oldOperator variables
 function allClear() {
   navigator.vibrate(50);
