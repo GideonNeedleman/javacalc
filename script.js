@@ -120,7 +120,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
   document.getElementById("btn-7").addEventListener("click", function() { inputNum(7); });
   document.getElementById("btn-8").addEventListener("click", function() { inputNum(8); });
   document.getElementById("btn-9").addEventListener("click", function() { inputNum(9); });
-  document.getElementById("btn-mul").addEventListener("click", function() { operator('*'); });
+  document.getElementById("btn-mul").addEventListener("click", function() { operator('x'); });
   document.getElementById("btn-4").addEventListener("click", function() { inputNum(4); });
   document.getElementById("btn-5").addEventListener("click", function() { inputNum(5); });
   document.getElementById("btn-6").addEventListener("click", function() { inputNum(6); });
