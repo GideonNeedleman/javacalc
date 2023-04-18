@@ -144,5 +144,13 @@ document.addEventListener('keydown', function(e) {
     operator(key);
   } else if (key == '*' ) {
     operator('x');
+  } else if (key == 'Enter') {
+    equals();
+  } else if (key == '.') {
+    inputDec();
+  } else if (key == 'Escape') {
+    allClear();
+  } else if (key == 'Backspace' || key == 'Delete') {
+    del();
   }
 });
