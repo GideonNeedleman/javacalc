@@ -113,6 +113,7 @@ function equals() {
   operand = null;
 }
 
+// get click / touch inputs
 document.getElementById("btn-del").addEventListener("click", del);
 document.getElementById("btn-ce").addEventListener("click", ce);
 document.getElementById("btn-ac").addEventListener("click", allClear);
@@ -142,7 +143,7 @@ document.addEventListener('keydown', function(e) {
     inputNum(key);
   } else if (key == '-' || key == '+' || key == '/') {
     operator(key);
-  } else if (key == '*' ) {
+  } else if (key == '*' ) { // special case where I put 'x' in upper display for multiplication
     operator('x');
   } else if (key == 'Enter') {
     equals();
