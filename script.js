@@ -98,6 +98,7 @@ function equals() {
   // simply doing lowerDisplay.value = result
   // can have display issues if the result is > max digits long. ex: 2/3 or multiplying large numbers. Solution is for long numbers to either truncate them to 11 digits or convert to scientific notation. 
   // No need to do this when computing result when pressing operator button (chaining operations) because upper display is much longer.
+  console.log(result);
   if (result.toString().length > max) {
     if (result > 10000000000) {
       lowerDisplay.value = result.toExponential(5);
@@ -112,25 +113,36 @@ function equals() {
   operand = null;
 }
 
-window.addEventListener("DOMContentLoaded", (event) => {
-  document.getElementById("btn-del").addEventListener("click", del);
-  document.getElementById("btn-ce").addEventListener("click", ce);
-  document.getElementById("btn-ac").addEventListener("click", allClear);
-  document.getElementById("btn-div").addEventListener("click", function() { operator('/'); });
-  document.getElementById("btn-7").addEventListener("click", function() { inputNum(7); });
-  document.getElementById("btn-8").addEventListener("click", function() { inputNum(8); });
-  document.getElementById("btn-9").addEventListener("click", function() { inputNum(9); });
-  document.getElementById("btn-mul").addEventListener("click", function() { operator('x'); });
-  document.getElementById("btn-4").addEventListener("click", function() { inputNum(4); });
-  document.getElementById("btn-5").addEventListener("click", function() { inputNum(5); });
-  document.getElementById("btn-6").addEventListener("click", function() { inputNum(6); });
-  document.getElementById("btn-min").addEventListener("click", function() { operator('-'); });
-  document.getElementById("btn-1").addEventListener("click", function() { inputNum(1); });
-  document.getElementById("btn-2").addEventListener("click", function() { inputNum(2); });
-  document.getElementById("btn-3").addEventListener("click", function() { inputNum(3); });
-  document.getElementById("btn-add").addEventListener("click", function() { operator('+'); });
-  document.getElementById("btn-neg").addEventListener("click", posNeg);
-  document.getElementById("btn-0").addEventListener("click", function() { inputNum(0); });
-  document.getElementById("btn-dec").addEventListener("click", inputDec);
-  document.getElementById("btn-eq").addEventListener("click", equals);
+document.getElementById("btn-del").addEventListener("click", del);
+document.getElementById("btn-ce").addEventListener("click", ce);
+document.getElementById("btn-ac").addEventListener("click", allClear);
+document.getElementById("btn-div").addEventListener("click", function() { operator('/'); });
+document.getElementById("btn-7").addEventListener("click", function() { inputNum(7); });
+document.getElementById("btn-8").addEventListener("click", function() { inputNum(8); });
+document.getElementById("btn-9").addEventListener("click", function() { inputNum(9); });
+document.getElementById("btn-mul").addEventListener("click", function() { operator('x'); });
+document.getElementById("btn-4").addEventListener("click", function() { inputNum(4); });
+document.getElementById("btn-5").addEventListener("click", function() { inputNum(5); });
+document.getElementById("btn-6").addEventListener("click", function() { inputNum(6); });
+document.getElementById("btn-min").addEventListener("click", function() { operator('-'); });
+document.getElementById("btn-1").addEventListener("click", function() { inputNum(1); });
+document.getElementById("btn-2").addEventListener("click", function() { inputNum(2); });
+document.getElementById("btn-3").addEventListener("click", function() { inputNum(3); });
+document.getElementById("btn-add").addEventListener("click", function() { operator('+'); });
+document.getElementById("btn-neg").addEventListener("click", posNeg);
+document.getElementById("btn-0").addEventListener("click", function() { inputNum(0); });
+document.getElementById("btn-dec").addEventListener("click", inputDec);
+document.getElementById("btn-eq").addEventListener("click", equals);
+
+// get keyboard inputs
+document.addEventListener('keydown', function(e) {
+  let key = e.key;
+  console.log(key);
+  if (key >= 0 || key <= 9) {
+    inputNum(key);
+  } else if (key == '-' || key == '+' || key == '/') {
+    operator(key);
+  } else if (key == '*' ) {
+    operator('x');
+  }
 });
