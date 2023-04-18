@@ -111,3 +111,26 @@ function equals() {
   oldOp = null;
   operand = null;
 }
+
+window.addEventListener("DOMContentLoaded", (event) => {
+  document.getElementById("btn-del").addEventListener("click", del);
+  document.getElementById("btn-ce").addEventListener("click", ce);
+  document.getElementById("btn-ac").addEventListener("click", allClear);
+  document.getElementById("btn-div").addEventListener("click", function() { operator('/'); });
+  document.getElementById("btn-7").addEventListener("click", function() { inputNum(7); });
+  document.getElementById("btn-8").addEventListener("click", function() { inputNum(8); });
+  document.getElementById("btn-9").addEventListener("click", function() { inputNum(9); });
+  document.getElementById("btn-mul").addEventListener("click", function() { operator('*'); });
+  document.getElementById("btn-4").addEventListener("click", function() { inputNum(4); });
+  document.getElementById("btn-5").addEventListener("click", function() { inputNum(5); });
+  document.getElementById("btn-6").addEventListener("click", function() { inputNum(6); });
+  document.getElementById("btn-min").addEventListener("click", function() { operator('-'); });
+  document.getElementById("btn-1").addEventListener("click", function() { inputNum(1); });
+  document.getElementById("btn-2").addEventListener("click", function() { inputNum(2); });
+  document.getElementById("btn-3").addEventListener("click", function() { inputNum(3); });
+  document.getElementById("btn-add").addEventListener("click", function() { operator('+'); });
+  document.getElementById("btn-neg").addEventListener("click", posNeg);
+  document.getElementById("btn-0").addEventListener("click", function() { inputNum(0); });
+  document.getElementById("btn-dec").addEventListener("click", inputDec);
+  document.getElementById("btn-eq").addEventListener("click", equals);
+});
