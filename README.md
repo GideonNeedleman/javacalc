@@ -12,7 +12,7 @@ It is also possible to 'chain' operations together. When pressing an operator bu
 
 1.1 - 20230417 - Update styling
 
-1.2 - 20230418 - Hopefully fixed iphone click error
+1.2 - 20230418 - Refactored with eventListener instead of onclick
 
 ## Known Bugs
 
@@ -22,4 +22,6 @@ It is also possible to 'chain' operations together. When pressing an operator bu
 
 2023041801 - Button presses don't work with iphone.
 
-2023041802 - pressing CE button has no vibration
+~2023041802~ - pressing CE button has no vibration
+
+20230426 - Pressing decimal point '.' repeatedly will insert multiple decimal points.
