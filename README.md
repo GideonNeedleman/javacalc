@@ -24,4 +24,4 @@ It is also possible to 'chain' operations together. When pressing an operator bu
 
 ~2023041802~ - pressing CE button has no vibration
 
-20230426 - Pressing decimal point '.' repeatedly will insert multiple decimal points.
+2023042601 - Pressing decimal point '.' repeatedly will insert multiple decimal points.
